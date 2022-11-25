@@ -1,21 +1,21 @@
-package com.yan.http_api.entity;
+package com.yan.http_api.service.dto;
 
+import com.yan.http_api.entity.Address;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
-import javax.persistence.*;
+import java.io.Serializable;
 
+/**
+ * A DTO for the {@link Address} entity
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Accessors(chain = true)
-@Entity
-public class Address {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class AddressDto implements Serializable {
     private Long id;
     private Integer regionCode;
     private String regionName;
