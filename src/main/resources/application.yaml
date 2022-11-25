@@ -1,0 +1,11 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/http_api
+    username: yan
+    password: 1
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  liquibase:
+    enabled: true
