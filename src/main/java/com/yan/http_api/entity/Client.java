@@ -35,10 +35,6 @@ public class Client {
     @JoinColumn(name = "address_id")
     private Address address;
 
-    //    @OneToMany(
-//            cascade = CascadeType.ALL,
-//            orphanRemoval = true,
-//            mappedBy = "client")
     @OneToMany(
             cascade = CascadeType.ALL,
             orphanRemoval = true)

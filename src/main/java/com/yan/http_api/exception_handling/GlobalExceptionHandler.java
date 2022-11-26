@@ -16,9 +16,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler
     public ResponseEntity<String> handle(MethodArgumentNotValidException e) {
-//        return new ResponseEntity<>(e.getFieldError() != null ? e.getFieldError().getDefaultMessage() : e.getMessage(),
-//                HttpStatus.BAD_REQUEST);
-        return new ResponseEntity<>(e.getFieldError().getDefaultMessage(),
+        return new ResponseEntity<>(e.getFieldError() != null ? e.getFieldError().getDefaultMessage() : e.getMessage(),
                 HttpStatus.BAD_REQUEST);
     }
 

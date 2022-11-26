@@ -7,8 +7,8 @@ import lombok.RequiredArgsConstructor;
 @Getter
 public enum ExceptionMessage {
     CLIENT_ID("Клиента с таким id нет в базе"),
-    ORDER_ID("There is no such order with this id in the database"),
-    NAME("There is no such client with this name in the database");
+    ORDER_ID("Заказа с таким id нет в базе"),
+    NAME("Клиента с таким именем нет в базе");
 
     private final String message;
 }
