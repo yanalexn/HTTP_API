@@ -66,7 +66,7 @@ public class ClientController {
                                     .setInn(client.getInn())
                                     .setPhone(client.getPhone());
                             return clientRepo.save(old);
-                        }) //сохранять нужно, set недостаточно (не отправляется инфа в бд)
+                        })
                         .orElseThrow(() -> new HttpApiException(ExceptionMessage.CLIENT_ID.getMessage())));
     }
 
@@ -75,6 +75,6 @@ public class ClientController {
         if (!clientRepo.existsById(id))
             throw new HttpApiException(ExceptionMessage.CLIENT_ID.getMessage());
         clientRepo.deleteById(id);
-        return "The client is successfully deleted";
+        return "Клиент успешно удалён";
     }
 }

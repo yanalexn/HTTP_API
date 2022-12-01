@@ -21,5 +21,5 @@ public class ClientDto implements Serializable {
     private String name;
     private String inn;
     private String phone;
-    private Address address;
+    private AddressDto address;
 }

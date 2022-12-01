@@ -15,7 +15,7 @@ import java.time.LocalDate;
 @Entity
 public class Orderr {
 /*There is a reason for such strange names: ordeRR and descriptioNN - it is because order and description are reserved words
-in mysql so I can't use them. "Funny" enough that I spent the whole day searching for this bug and h    ere it is.*/
+in mysql so I can't use them. "Funny" enough that I spent the whole day searching for this bug and here it is.*/
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -24,6 +24,11 @@ in mysql so I can't use them. "Funny" enough that I spent the whole day searchin
     private Integer cost;
 
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-//    @JoinColumn(name = "client_id")
     private Client client;
+
+    public Orderr(LocalDate creationDate, String descriptionn, Integer cost) {
+        this.creationDate = creationDate;
+        this.descriptionn = descriptionn;
+        this.cost = cost;
+    }
 }

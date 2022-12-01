@@ -40,4 +40,12 @@ public class Client {
             orphanRemoval = true)
     @JoinColumn(name = "client_id")//тогда у orderr будет автоматически создаваться fk
     private List<Orderr> orders;
+
+    public Client(String name, String inn, String phone, Address address, List<Orderr> orders) {
+        this.name = name;
+        this.inn = inn;
+        this.phone = phone;
+        this.address = address;
+        this.orders = orders;
+    }
 }

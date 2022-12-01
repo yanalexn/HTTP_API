@@ -60,6 +60,6 @@ public class OrderController {
         if (!orderRepo.existsById(id))
             throw new HttpApiException(ExceptionMessage.ORDER_ID.getMessage());
         orderRepo.deleteById(id);
-        return "The order is successfully deleted";
+        return "Заказ успешно удалён";
     }
 }
