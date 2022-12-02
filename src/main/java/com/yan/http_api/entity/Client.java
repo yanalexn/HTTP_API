@@ -22,12 +22,12 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull(message = "Поле имя не должно быть пустым")
+    @NotNull(message = "Поле имя не должно быть null")
     @NotEmpty(message = "Поле имя не должно быть пустым")
     private String name;
     private String inn;
 
-    @NotNull(message = "Поле номер телефона не должно быть пустым")
+    @NotNull(message = "Поле номер телефона не должно быть null")
     @Pattern(regexp = "^\\+?\\d+$", message = "Недопустимые символы в номере телефона и/или недостаточно цифр")
     private String phone;
 
